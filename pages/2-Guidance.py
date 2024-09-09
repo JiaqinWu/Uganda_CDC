@@ -20,7 +20,7 @@ def app():
     #st.title('Sustainable Capacity of Local Organizations to Reach and End the HIV/AIDS Pandemic (SCORE)')
 
     title = 'Guidance for this dashboard'
-    col1, col2, col3 = st.columns([4, 1, 5])
+    col1, col2, col3 = st.columns([3, 1, 5])
 
     with col1:
         st.write("")

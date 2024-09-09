@@ -35,7 +35,7 @@ def app():
     #st.set_page_config(page_title = 'Dashboard -- Uganda SCORE Survey', page_icon='🇺🇬',layout='wide')
 
     title = 'Comparison of Scores by Institution Within the Selected Question'
-    col1, col2, col3 = st.columns([4, 1, 5])
+    col1, col2, col3 = st.columns([3, 1, 5])
 
     with col1:
         st.write("")

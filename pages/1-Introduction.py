@@ -20,7 +20,7 @@ def app():
     #st.title('Sustainable Capacity of Local Organizations to Reach and End the HIV/AIDS Pandemic (SCORE)')
 
     title = 'Sustainable Capacity of Local Organizations to Reach and End the HIV/AIDS Pandemic (SCORE) -- CDC'
-    col1, col2, col3 = st.columns([4, 1, 5])
+    col1, col2, col3 = st.columns([3, 1, 5])
 
     with col1:
         st.write("")
@@ -68,7 +68,7 @@ def app():
     3. **Module 3: Technical Assistance**
     4. **Module 4: Data Use**
     5. **Module 5: Sustainability**
-    6. **Module 6: Finance and Administration**
+    6. **Module 6: Finance and Administration** - this module was implemented by Sustainability Solutions using the USAID Non-U.S. Organization Pre-Award Survey (NUPAS) tool. Data for this module is not included in this dashboard.
 
     The SCORE-POT has been developed by the SCORE Project with additions, adaptations and modifications from the USAID Non-U.S. Organization Pre-Award Survey (NUPAS) tool, the PEPFAR Strategic Direction (September 2022), and the Americorps Organizational Assessment Tool, Washington DC (2017), and the PEPFAR Rapid Site-level Health Workforce Assessment Tool.
     """)

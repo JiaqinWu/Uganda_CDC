@@ -17,12 +17,36 @@ df.replace({'\n': ' ', '\t': ' '}, regex=True, inplace=True)
 
 
 
-def render_html_table(df):
-    # Convert DataFrame to HTML without escape characters
-    html = df.to_html(index=False, escape=False)
+
+def display_static_styled_table(df):
+    # Define custom CSS
+    custom_css = """
+    <style>
+        .stTable {
+            width: 100% !important;
+            table-layout: fixed;
+        }
+        .stTable tbody td {
+            text-align: left;
+            padding: 8px;
+            border:2px solid #ddd;
+            word-wrap: break-word;
+        }
+        .stTable tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+    """
     
-    # Combine the custom style and the HTML table output
-    return html
+    # Display the custom CSS
+    st.markdown(custom_css, unsafe_allow_html=True)
+    
+    # Create a copy of the DataFrame without the index
+    df_no_index = df.copy()
+    df_no_index.index = [''] * len(df)
+    
+    # Display the static table
+    st.table(df_no_index)
 
 # Streamlit application
 def app():
@@ -88,7 +112,7 @@ def app():
         [['Question', '1:Nonexistent', '2:Basic','3:Adequate','4:Comprehensive','5:Exceptional']].reset_index().drop(columns='index')
     #st.dataframe(records)
     #st.table(records)
-    st.markdown(render_html_table(records), unsafe_allow_html=True)
+    display_static_styled_table(records)
 
 if __name__ == "__main__":
     app()
